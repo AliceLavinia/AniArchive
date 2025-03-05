@@ -1,0 +1,189 @@
+/* Configuração geral */
+body {
+    background-color: #121212;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo do cabeçalho */
+header {
+    font-size: 16px;
+    text-align: left;
+    padding: 10px;
+    color: #fff;
+}
+
+header h1 {
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    top: 20px;   /* Reduzindo a distância do topo */
+    left: 30px;  /* Aproximando da esquerda */
+    font-size: 24px;
+    color: white;
+    margin: 0;
+}
+
+/* Perfil do usuário */
+.perfil{
+    display: flex;
+    align-items: center;
+    padding: 100px 100px; /* Reduzi o padding superior para subir a seção */
+    gap: 20px;
+    width: 80%; /* Ajuste para ocupar mais da tela */
+    max-width: 900px; /* Para manter um limite */
+    margin: 10px auto; /* Menos margem para subir */
+    margin-left: 15px; /* Ajuste conforme necessário */
+}
+
+.perfil img {
+    width: 215px;  /* Aumenta a imagem */
+    height: 215px;
+    border-radius: 15px;
+}
+
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+}
+
+.perfil-info h2 {
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: -60px; /* Move o nome para cima */
+}
+
+.perfil-status {
+    display: flex;
+    gap: 50px;
+    font-size: 20px;
+    position: relative;
+    top: 15px; /* Move as estatísticas para baixo */
+}
+
+.perfil-status div {
+    display: flex;
+    flex-direction: column; /* Faz os números ficarem abaixo do texto */
+    text-align: center; /* Centraliza o conteúdo */
+}
+
+.perfil-status span {
+    font-size: 30px; /* Aumenta os números para melhor visualização */
+    font-weight: bold;
+    margin-top: 5px; /* Dá um espacinho entre o texto e o número */
+}
+
+/* Seção de animes e personagens favoritos */
+.seção {
+    padding: 10px;
+    margin-top: 5px; /* Reduz ainda mais o espaço entre as seções para aproximar os animes favoritos */
+    margin-left: 110px;
+}
+
+.seção-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.seção h2 {
+    font-size: 22px;
+    font-weight: bold;
+    position: relative;
+}
+
+.seção h2::after {
+    content: "";
+    display: block;
+    width: 58.5%; /* Faz a linha ocupar toda a largura do título */
+    height: 0.1px; /* Espessura da linha */
+    background-color: #ffffff; /* Cor da linha */
+    margin-top: 5px; /* Espaçamento entre o texto e a linha */
+}
+
+
+.anime-lista {
+    display: flex;
+    gap: 15px;
+}
+
+.anime-lista img, .personagem-lista img {
+    width: 100px;
+    height: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.anime-lista img:hover, .personagem-lista img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+
+.manga-lista {
+    display: flex;
+    gap: 15px;
+}
+
+.manga-lista img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.manga-lista img:hover, .personagem-lista img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+
+.filme-lista {
+    display: flex;
+    gap: 15px;
+}
+
+.filme-lista img {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 150px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+}
+
+.filme-lista img:hover, .personagem-lista img:hover {
+    transform: scale(1.1); /* Aumenta a imagem em 10% */
+}
+
+/* Resenhas */
+.review {
+    background-color: #1e1e1e;
+    padding: 20px 30px; 
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    align-items: center; /* Mantém alinhado verticalmente */
+    gap: 15px; /* Espaço entre as imagens */
+    justify-content: flex-start; /* Move as imagens para a esquerda */
+    max-width: 729px; /* Define um limite de largura */
+    margin-left: -0.5px; /* Move o fundo para a esquerda */
+}
+
+.review img {
+    width: 100px;  
+    height: 100px;
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    top: 1px; /* Sobe as imagens sem mexer no fundo */
+}
+
+
+.review-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.rating {
+    color: gold;
+    font-size: 16px;
+    margin-top: 5px;
+}

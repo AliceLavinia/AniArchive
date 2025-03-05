@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniArchive - Login</title>
+
+    <link rel="stylesheet" href="./src/css/login.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <h1 class="titulo">AniArchive</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="login-title">Login</h2>
+            <form action="login.php" method="POST">
+                <input type="email" id="email" name="email" placeholder="E-mail" required>
+                <input type="password" id="password" name="password" placeholder="Senha" required>
+
+                <div class="options">
+                    <label class="lembrar-label">
+                        <input type="checkbox" id="lembrar-me">
+                        <span>Lembrar-me</span>
+                    </label>
+                    <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+                </div>
+
+                <button type="submit">Entrar</button>
+
+                <p>Precisa de ajuda? <a href="#">Fale conosco</a></p>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>

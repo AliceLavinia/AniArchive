@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AniArchive - Cadastro</title>
+    
+    <link rel="stylesheet" href="./src/css/cadastro.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+
+    <header>
+        <h1 class="titulo">AniArchive</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2 class="cadastro-title">Cadastro</h2>
+            <form id="form">
+                <input type="text" id="usuario" name="usuario" placeholder="Nome de usuário" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required>
+
+                <div class="checkbox-container">
+                    <input type="checkbox" id="termos" required>
+                    <label for="termos">Aceito os Termos de Serviço</label>
+                </div>
+
+                <button type="submit">Cadastrar-se</button>
+            </form>
+        </div>
+    </main>
+
+</body>
+</html>
