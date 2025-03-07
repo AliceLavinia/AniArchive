@@ -1,3 +1,14 @@
+.profile-picture {
+        width: 30px; /* Ajuste o tamanho conforme necessário */
+        height: 40px;
+        border-radius: 30%; /* Deixa a imagem circular */
+        object-fit: cover; /* Garante que a imagem se ajuste sem distorcer */
+        border: 2px solid white; /* Borda opcional para destaque */
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* Efeito de sombra */
+    
+    
+}
+
 body {
     background-color: #111;
     color: white;
