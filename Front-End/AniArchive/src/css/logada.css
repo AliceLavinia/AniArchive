@@ -112,6 +112,8 @@ button:hover {
     color: white;
     text-decoration: none;
     font-size: 14px;
+    position: relative;
+
 }
 
 .ver-mais:hover {
@@ -145,4 +147,7 @@ button:hover {
     width: auto;  
     max-width: 100%;  
     height: auto;  
+}
+a{
+    pointer-events: auto;
 }
