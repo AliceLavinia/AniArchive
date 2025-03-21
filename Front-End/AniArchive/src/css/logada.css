@@ -96,6 +96,29 @@ button:hover {
     left: -0.1px; /* Move a linha para a direita */
 }
 
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header h2 {
+    color: white; /* Cor do título */
+    font-size: 20px;
+}
+
+.ver-mais {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.ver-mais:hover {
+    text-decoration: underline;
+}
+
+
 /* Grade de animes */
 .anime-list {
     display: flex;
