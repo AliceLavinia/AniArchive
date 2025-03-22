@@ -40,6 +40,43 @@ body {
     border-radius: 10px;
 }
 
+.search-profile {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Ícone de pesquisa */
+.search-icon {
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
+/* Imagem de perfil */
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer;
+}
+
+/* Barra de navegação */
+.menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
 
 
 .header h2 {
