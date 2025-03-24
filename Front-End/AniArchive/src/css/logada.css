@@ -49,14 +49,15 @@ body {
 }
 
 .search-icon {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
+    padding-right: 50%;
 }
 
 .profile-img {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     object-fit: cover;
     display: block;
@@ -82,7 +83,7 @@ body {
     color: white;
     text-decoration: none;
     margin: 0 15px;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 
@@ -140,13 +141,13 @@ button:hover {
 .content h2::after {
     content: "";
     display: block;
-    width: 89%;
+    width: 100%;
     /* Define o comprimento da linha */
-    height: 0.1px;
+    height: 2px;
     /* Espessura da linha */
     background-color: rgba(255, 255, 255, 0.3);
     /* Cor sutil da linha */
-    position: absolute;
+    position: relative;
     bottom: -5px;
     /* Afasta a linha do texto */
     left: -0.1px;
