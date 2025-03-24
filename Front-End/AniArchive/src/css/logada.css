@@ -49,16 +49,18 @@ body {
 }
 
 .search-icon {
-    width: 20px;
-    height: 60px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
 }
 
 .profile-img {
-    width: 100px;
+    width: 60px;
     height: 60px;
     border-radius: 50%;
     object-fit: cover;
+    display: block;
+    border: 3px solid white;
 }
 
 /* Menu */
