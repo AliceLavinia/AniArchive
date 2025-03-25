@@ -39,41 +39,34 @@ h3 {
 
 /* Seções */
 .perfil-config, .notificacoes {
-    width: 60%;
+    width: 50%;
+    max-width: 600px;
     margin: 20px auto;
     background-color: #1e1e1e;
     padding: 20px;
     border-radius: 10px;
+    box-sizing: border-box;
 }
 
 /* Container do perfil */
 .perfil-container {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Ajuste para separar conteúdo e imagem */
+    justify-content: flex-start; /* Ajuste para separar conteúdo e imagem */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
-.perfil-imagem {
-    align-items: center;
-    position: static;
-}
 
 .perfil-editar {
-    flex-grow: 0.5; /* Faz o formulário ocupar mais espaço */
+    flex:1; /* Faz o formulário ocupar mais espaço */
+    max-width: 50%;
 }
 
-.perfil-config img {
-    width: 195px;
-    height: 195px;
-    border-radius: 10px;
-    position: none;  /* Permite mover a imagem */
-    top: 20px; /* Move para baixo */
-    left: 100px; /* Move para a esquerda */
-}
+
 
 /* Estilizando inputs */
 .input-container {
-    position: relative;
     margin-bottom: 15px;
 }
 
