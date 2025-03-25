@@ -14,7 +14,15 @@
 
     <title>AniArchive</title>
 
-
+    <style>
+        .line.large-line {
+            width: 100%;
+            height: 1px; /* Aumenta a espessura da linha */
+            background-color: #f0f0f0; /* Mesma cor da section-header */
+            margin-top: -7px; /* Adiciona um espaçamento superior */
+            margin-bottom: 10px; /* Adiciona um espaçamento inferior */
+        }
+    </style>
 </head>
 
 <body>
@@ -26,13 +34,9 @@
             </div>
             <div class="search-profile">
                 <input type="text" id="meuInput" style="display: none;">
-                <img src="./src/imagens/lupinha.png"alt="Pesquisar" class="search-icon">
+                <img src="./src/imagens/lupinha.png" alt="Pesquisar" class="search-icon">
                 <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
-            
-
-                
             </div>
-            
         </div>
         <div class="pages-bar">
             <a href="#">Home</a>
@@ -43,9 +47,10 @@
 
     <section class="content">
         <div class="section-header">
-            <h2>Animes populares</h2>
+            <h2>Animes Populares</h2>
             <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
         </div>
+        <div class="line large-line"></div> <!-- Linha decorativa maior -->
         <div class="anime-list">
             <img class="imagem" src="./src/img-ctlg-pop/one-piece.png" alt="One Piece">
             <img class="imagem" src="./src/img-ctlg-pop/naruto.jpg" alt="Naruto">
@@ -57,11 +62,12 @@
             <img class="imagem" src="./src/img-ctlg-pop/kny.jpg" alt="Kimetsu no Yaiba">
             <img class="imagem" src="./src/img-ctlg-pop/pokemon.png" alt="Pokémon">
         </div>
-
+    
         <div class="section-header">
             <h2>Lançamentos</h2>
             <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
         </div>
+        <div class="line large-line"></div> <!-- Linha decorativa maior -->
         <div class="anime-list">
             <img class="imagem" src="./src/img-ctlg-lanc/amagami-sister.jpg" alt="Amagami Sister">
             <img class="imagem" src="./src/img-ctlg-lanc/blue-miburo.jpg" alt="Blue Miburo">
@@ -73,11 +79,12 @@
             <img class="imagem" src="./src/img-ctlg-lanc/shangrila-frontier.jpg" alt="Shangri-La Frontier">
             <img class="imagem" src="./src/img-ctlg-lanc/solo-leveling.jpg" alt="Solo Leveling">
         </div>
-
+    
         <div class="section-header">
             <h2>Futuros Lançamentos</h2>
             <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
         </div>
+        <div class="line large-line"></div> <!-- Linha decorativa maior -->
         <div class="anime-list">
             <img class="imagem" src="./src/img-ctlg-fut/dress-up.png" alt="Dress Up">
             <img class="imagem" src="./src/img-ctlg-fut/dungeon-meshi.png" alt="Dungeon Meshi">
@@ -89,8 +96,7 @@
             <img class="imagem" src="./src/img-ctlg-fut/tanya-evil.png" alt="Tanya Evil">
             <img class="imagem" src="./src/img-ctlg-fut/bleach.png" alt="Bleach">
         </div>
-    </section>
-
+    </section>     
 </body>
 
 </html>

@@ -49,8 +49,8 @@ body {
 }
 
 .search-icon {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     cursor: pointer;
     padding-right: 50%;
 }
@@ -141,24 +141,33 @@ button:hover {
 .content h2::after {
     content: "";
     display: block;
-    width: 100%;
-    /* Define o comprimento da linha */
-    height: 2px;
-    /* Espessura da linha */
+    width: 89%;
+    height: 0.1px;
     background-color: rgba(255, 255, 255, 0.3);
-    /* Cor sutil da linha */
-    position: relative;
+    position: absolute;
     bottom: -5px;
-    /* Afasta a linha do texto */
     left: -0.1px;
-    /* Move a linha para a direita */
+}
+
+.content h2::after {
+    content: none;
+}
+
+.content h2 {
+    font-family: inherit;
 }
 
 .section-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    padding: 10px 20px;
+}
+
+.line {
+    height: 2px;
+    background-color: #f0f0f0; /* Mesma cor da section-header */
+    margin: 10px 0;
 }
 
 .section-header h2 {
@@ -188,7 +197,7 @@ button:hover {
     justify-content: flex-start;
     align-items: center;
     gap: 15px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     padding-left: 0.1px;
     margin-bottom: 60px;
     /* Aumenta o espaçamento entre as seções */
