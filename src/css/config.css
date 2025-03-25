@@ -37,6 +37,11 @@ h3 {
     text-align: left;
 }
 
+/* Ajustando título "Notificações" */
+.notificacoes h2 {
+    margin-top: 5px; /* Ajuste para subir apenas o título */
+}
+
 /* Seções */
 .perfil-config, .notificacoes {
     width: 60%;
@@ -63,7 +68,7 @@ h3 {
     border-radius: 10px;
     position: relative;  /* Permite mover a imagem */
     top: 20px; /* Move para baixo */
-    left: -170px; /* Move para a esquerda */
+    left: -150px; /* Move para a esquerda */
 }
 
 /* Estilizando inputs */
@@ -83,7 +88,7 @@ h3 {
 
 .input-container .edit-icon {
     position: absolute;
-    right: 10px;
+    right: -5px; /* Ajuste para mover mais à direita */
     top: 50%;
     transform: translateY(-50%);
     cursor: pointer;
