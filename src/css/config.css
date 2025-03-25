@@ -71,13 +71,9 @@ h3 {
     width: 195px;
     height: 195px;
     border-radius: 10px;
-    position: relative;  /* Permite mover a imagem */
-    top: 20px; /* Move para baixo */
-<<<<<<< HEAD
+    position: relative; /* Permite mover a imagem */
+    top: 170px; /* Move para baixo */
     left: 170px; /* Move para a esquerda */
-=======
-    left: -150px; /* Move para a esquerda */
->>>>>>> 600debba179d851fc537a149830a8e9ea5010ce4
 }
 
 /* Estilizando inputs */
