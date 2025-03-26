@@ -76,6 +76,13 @@ button {
 button:hover {
     background: rgba(255, 255, 255, 0.5);
 }
+/* Ajuste para os textos adicionais */
+.extra-info {
+    margin-top: 50px; /* Ajuste conforme necessário */
+    font-size: 18px;
+    text-align: center;
+    line-height: 1.5;
+}
 
 /* Seção de conteúdo */
 .content {
