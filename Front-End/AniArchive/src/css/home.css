@@ -132,11 +132,11 @@ button:hover {
     height: 393px;  
 }
 
-/* Nova seção para os textos adicionais */
-.info-section {
-    margin-top: 100px; /* Ajuste para descer a seção */
+/* Ajuste na seção de informações extras */
+.extra-info {
+    margin-top: 30px; /* Aumente esse valor para descer mais */
     font-family: 'Poppins', sans-serif; /* Fonte personalizada */
-    font-size: 20px;
+    font-size: 20px; /* Aumenta o tamanho da fonte */
     text-align: center;
-    line-height: 1.6;
+    line-height: 1.8; /* Aumenta o espaçamento entre linhas */
 }
