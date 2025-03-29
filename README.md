@@ -19,10 +19,10 @@ Este projeto fullstack foi desenvolvido para a disciplina de Laboratório de Eng
 - Login e cadastro de usuários
 - Recuperação de senha
 - Interface responsiva
-- Navegar entre as obras
 - Gerenciamento de conteúdo
-- Navegar na suas listas (Animes/Mangá/Filme)
+- Navegação pelas obras
+- Sistema de recomendação
 - Editar as informações e foto de perfil
-- Ativar/Desativar as notificações
+- Notificações personalizadas
 
 ## Como Executar o Projeto
