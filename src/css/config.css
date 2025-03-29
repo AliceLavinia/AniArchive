@@ -3,6 +3,7 @@
 
 body {
     background-color: #121212;
+    box-sizing: border-box;
     color: #ddd;
     margin: 0;
     padding: 0;
@@ -60,7 +61,7 @@ h3 {
 
 .perfil-imagem {
     align-items: center;
-    position: static;
+    position: sticky; /* Permite que a imagem fique fixa ao rolar */
 }
 
 .perfil-editar {
