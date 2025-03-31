@@ -57,24 +57,31 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between; /* Ajuste para separar conteúdo e imagem */
+    gap: 20px; /* Espaçamento entre os elementos */
 }
 
 .perfil-imagem {
+    display: flex;
+    justify-content: center;
     align-items: center;
-    position: sticky; /* Permite que a imagem fique fixa ao rolar */
+    flex-shrink: 0;
+    width: 200px; /* Largura fixa para a imagem */
 }
 
 .perfil-editar {
-    flex-grow: 0.5; /* Faz o formulário ocupar mais espaço */
+    flex-grow: 0.9; /* Faz o formulário ocupar mais espaço */
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    padding: 20px;
+
 }
 
 .perfil-config img {
     width: 195px;
     height: 195px;
     border-radius: 10px;
-    position: relative; /* Permite mover a imagem */
-    top: 20px; /* Move para baixo */
-    left: -150px; /* Move para a esquerda */
+    position: static; /* Permite mover a imagem */
+    
 }
 
 /* Estilizando inputs */
