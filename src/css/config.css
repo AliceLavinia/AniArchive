@@ -68,7 +68,7 @@ h3 {
     width: 200px; /* Largura fixa para a imagem */
     align-self: center;
     margin-top: 40px; /* Ajuste para subir a imagem */
-    left: 20px;
+    margin-right: auto;
 }
 
 .perfil-editar {
