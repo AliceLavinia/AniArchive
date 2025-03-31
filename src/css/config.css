@@ -70,6 +70,7 @@ h3 {
     margin-top: 40px; /* Ajuste para subir a imagem */
     margin-right: auto; /* Centraliza a imagem */
     margin-left: 20px; /* Espaçamento à esquerda */
+    margin-bottom: 20px; /* Espaçamento inferior */
 }
 
 .perfil-editar {
