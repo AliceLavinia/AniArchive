@@ -1,189 +1,148 @@
-/* Configuração geral */
+/* Configuração geral */ 
 body {
     background-color: #121212;
     color: white;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza todo o conteúdo */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+      
 }
 
 /* Estilo do cabeçalho */
 header {
-    font-size: 16px;
-    text-align: left;
-    padding: 10px;
-    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: left; /* Agora o título vai para a esquerda */
 }
 
 header h1 {
     font-family: 'Press Start 2P', cursive;
-    position: absolute;
-    top: 20px;   /* Reduzindo a distância do topo */
-    left: 30px;  /* Aproximando da esquerda */
-    font-size: 24px;
+    font-size: 28px;
     color: white;
     margin: 0;
+    left: -140px;
 }
 
 /* Perfil do usuário */
-.perfil{
+.perfil {
     display: flex;
     align-items: center;
-    padding: 100px 100px; /* Reduzi o padding superior para subir a seção */
+    justify-content: center;
     gap: 20px;
-    width: 80%; /* Ajuste para ocupar mais da tela */
-    max-width: 900px; /* Para manter um limite */
-    margin: 10px auto; /* Menos margem para subir */
-    margin-left: 15px; /* Ajuste conforme necessário */
+    padding: 30px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .perfil img {
-    width: 215px;  /* Aumenta a imagem */
+    width: 215px;
     height: 215px;
     border-radius: 15px;
-}
-
-.perfil-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0;
 }
 
 .perfil-info h2 {
     font-size: 30px;
     font-weight: bold;
-    position: relative;
-    top: -60px; /* Move o nome para cima */
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .perfil-status {
     display: flex;
     gap: 50px;
     font-size: 20px;
+    margin-top: 40px;
     position: relative;
-    top: 15px; /* Move as estatísticas para baixo */
+    top: 0;
 }
 
 .perfil-status div {
     display: flex;
-    flex-direction: column; /* Faz os números ficarem abaixo do texto */
-    text-align: center; /* Centraliza o conteúdo */
+    flex-direction: column;
+    text-align: center;
 }
 
 .perfil-status span {
-    font-size: 30px; /* Aumenta os números para melhor visualização */
+    font-size: 30px;
     font-weight: bold;
-    margin-top: 5px; /* Dá um espacinho entre o texto e o número */
+    margin-top: 5px;
 }
 
-/* Seção de animes e personagens favoritos */
+/* Seções */
 .seção {
-    padding: 10px;
-    margin-top: 5px; /* Reduz ainda mais o espaço entre as seções para aproximar os animes favoritos */
-    margin-left: 110px;
-}
-
-.seção-title {
-    font-size: 18px;
-    margin-bottom: 5px;
+    padding: 20px 0;
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
 }
 
 .seção h2 {
-    font-size: 22px;
+    font-size: 24px;
+    font-family: 'montserrat', sans-serif;
     font-weight: bold;
     position: relative;
+    margin-bottom: 10px;
 }
 
 .seção h2::after {
     content: "";
     display: block;
-    width: 58.5%; /* Faz a linha ocupar toda a largura do título */
-    height: 0.1px; /* Espessura da linha */
-    background-color: #ffffff; /* Cor da linha */
-    margin-top: 5px; /* Espaçamento entre o texto e a linha */
+    width: 60px;
+    height: 2px;
+    background-color: #fff;
+    margin: 8px auto 0;
 }
 
-
-.anime-lista {
+/* Listas (animes, mangás, filmes) */
+.anime-lista,
+.manga-lista,
+.filme-lista {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 15px;
+    margin-top: 10px;
 }
 
-.anime-lista img, .personagem-lista img {
+.anime-lista img,
+.manga-lista img,
+.filme-lista img {
     width: 100px;
     height: 150px;
     border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
+    transition: transform 0.3s ease-in-out;
 }
 
-.anime-lista img:hover, .personagem-lista img:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
+.anime-lista img:hover,
+.manga-lista img:hover,
+.filme-lista img:hover {
+    transform: scale(1.1);
 }
 
-.manga-lista {
-    display: flex;
-    gap: 15px;
-}
-
-.manga-lista img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: 150px;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
-}
-
-.manga-lista img:hover, .personagem-lista img:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
-}
-
-.filme-lista {
-    display: flex;
-    gap: 15px;
-}
-
-.filme-lista img {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: 150px;
-    border-radius: 5px;
-    transition: transform 0.3s ease-in-out; /* Suaviza a transição */
-}
-
-.filme-lista img:hover, .personagem-lista img:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% */
-}
-
-/* Resenhas */
+/* Personagens favoritos */
 .review {
     background-color: #1e1e1e;
-    padding: 20px 30px; 
+    padding: 20px 30px;
     border-radius: 10px;
-    margin: 10px;
     display: flex;
-    align-items: center; /* Mantém alinhado verticalmente */
-    gap: 15px; /* Espaço entre as imagens */
-    justify-content: flex-start; /* Move as imagens para a esquerda */
-    max-width: 729px; /* Define um limite de largura */
-    margin-left: -0.5px; /* Move o fundo para a esquerda */
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    max-width: 1000px;
+    margin: 10px auto;
 }
 
 .review img {
-    width: 100px;  
+    width: 100px;
     height: 100px;
     border-radius: 5px;
     transition: transform 0.3s ease-in-out;
-    position: relative;
-    top: 1px; /* Sobe as imagens sem mexer no fundo */
 }
 
-
-.review-content {
-    display: flex;
-    flex-direction: column;
-}
-
-.rating {
-    color: gold;
-    font-size: 16px;
-    margin-top: 5px;
+.review img:hover {
+    transform: scale(1.1);
 }
