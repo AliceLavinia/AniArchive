@@ -76,7 +76,7 @@ header h1 {
 .seção {
     padding: 20px 0;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     text-align: left; /* muda de center para left */
     margin-left: 100px; /* empurra tudo um pouco da borda esquerda */
 }
