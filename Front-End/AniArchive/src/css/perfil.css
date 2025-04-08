@@ -32,8 +32,8 @@ header h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
-    padding: 30px;
+    gap: 40px;
+    padding: 40px 0;
     width: 100%;
     max-width: 1000px;
 }
@@ -42,13 +42,14 @@ header h1 {
     width: 215px;
     height: 215px;
     border-radius: 15px;
+    object-fit: cover;
 }
 
-.perfil-info h2 {
-    font-size: 30px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    margin-top: 10px;
+.perfil-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza o texto e status */
+    text-align: center;
 }
 
 .perfil-status {
