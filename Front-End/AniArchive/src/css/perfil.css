@@ -30,21 +30,12 @@ header h1 {
 /* Perfil do usuário */
 .perfil {
     display: flex;
-<<<<<<< HEAD
     /* align-items: center;
     justify-content: center; */
-=======
-    align-items: center;
->>>>>>> 34abfccc5c84db4f38a495836ae478043c3c4e95
     gap: 20px;
     padding: 20px;
     width: 100%;
-<<<<<<< HEAD
     max-width: 1100px;
-=======
-    max-width: 1000px;
-    margin-left: 160px; /* move a seção perfil */
->>>>>>> 34abfccc5c84db4f38a495836ae478043c3c4e95
 }
 
 .perfil img {
