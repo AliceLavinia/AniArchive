@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AniArchive - Login</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./src/css/login.css">
 </head>
 <body>
@@ -19,6 +23,17 @@
                 <input type="email" id="email" placeholder="Email" required>
                 <input type="password" id="password" placeholder="Senha" required>
                 <button type="submit">Entrar</button>
+
+                <div class="options">
+                    <label class="lembrar-label">
+                        <input type="checkbox" id="lembrar-me">
+                        <span>Lembrar-me</span>
+                    </label>
+                    <a href="#" class="esqueceu-senha">Esqueceu a senha?</a>
+                </div>
+
+                <p>Precisa de ajuda? <a href="#">Fale conosco</a></p>
+
             </form>
             <div id="messageDiv"></div> <!-- For showing messages -->
         </div>
