@@ -31,11 +31,11 @@ header h1 {
 .perfil {
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 20px;
     padding: 30px;
     width: 100%;
     max-width: 1000px;
+    margin-left: 160px; /* move a seção perfil */
 }
 
 .perfil img {
