@@ -23,10 +23,10 @@
         <div class="container">
             <h2 class="cadastro-title">Cadastro</h2>
             <form id="form">
-                <input type="text" id="usuario" name="usuario" placeholder="Nome de usuário" required>
-                <input type="email" id="email" name="email" placeholder="Email" required>
-                <input type="password" id="senha" name="senha" placeholder="Senha" required>
-                <input type="password" id="confirma_senha" name="confirma_senha" placeholder="Confirme sua senha" required>
+                <input type="text" id="name" placeholder="Nome de usuário" required>
+                <input type="email" id="email" placeholder="Email" required>
+                <input type="password" id="password" placeholder="Senha" required>
+                <input type="password" id="confirmpassword" placeholder="Confirme sua senha" required>
 
                 <div class="checkbox-container">
                     <input type="checkbox" id="termos" required>
@@ -35,8 +35,13 @@
 
                 <button type="submit">Cadastrar-se</button>
             </form>
+
+            <!-- Display messages here -->
+            <div id="message" style="color: red; margin-top: 10px;"></div>
         </div>
     </main>
+
+    <script src="cadastro.js"></script>
 
 </body>
 </html>
