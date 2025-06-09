@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+body {
+  background-color: #111;
+  color: #ccc;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.logo {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 22px;
+  color: #ccc;
+}
+
+.top-right {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-right: 20px; /* afasta a lupa do avatar */
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.anime-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.cover {
+  width: 120px;
+  border-radius: 5px;
+}
+
+.details {
+  max-width: 500px;
+}
+
+.year {
+  color: #777;
+  margin-top: -10px;
+}
+
+.desc {
+  margin: 15px 0;
+  line-height: 1.5;
+}
+
+.add-btn {
+  background-color: #19C419;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+}
+
+.resenhas h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.resenha {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  padding: 15px;
+  display: flex;
+  gap: 15px;
+  max-width: 600px;
+}
+
+.resenha-img {
+  width: 60px;
+  border-radius: 5px;
+}
+
+.resenha-text p {
+  margin-bottom: 5px;
+}
