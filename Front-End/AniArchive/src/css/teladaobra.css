@@ -36,7 +36,7 @@ header {
   height: 32px;
   object-fit: contain;
   cursor: pointer;
-  margin-right: 20px; /* afasta a lupa do avatar */
+  margin-right: 120px; /* afasta a lupa do avatar */
 }
 
 .avatar {
@@ -80,7 +80,7 @@ header {
   border-radius: 5px;
   position: absolute;
   top: 0;
-  right: 0;
+  right: 120px;
   cursor: pointer;
 }
 
