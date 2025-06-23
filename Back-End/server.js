@@ -154,4 +154,3 @@ mongoose
     });
   })
   .catch((err) => console.log('❌ Erro na conexão com o banco:', err));
-
