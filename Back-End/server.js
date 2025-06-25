@@ -1,5 +1,7 @@
 require('dotenv').config()
 const express = require('express')
+const path = require('path')
+const fs = require('fs')
 const mongoose = require('mongoose')
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
@@ -30,79 +32,22 @@ const Anime = animeConnection.model('Anime', new mongoose.Schema({
 }))
 
 // ==================== ROTAS GERAIS ====================
-app.get('/', (req, res) => {
-    res.status(200).json({ msg: "bem vindeSSSSSSS" })
+const routesPath = path.join(__dirname, 'routes')
+
+fs.readdirSync(routesPath).forEach(file => {
+  if (file.endsWith('.js')) {
+    const route = require(path.join(routesPath, file))
+    app.use('/', route) // Você pode mudar o prefixo se quiser
+  }
 })
 
 // ==================== MIDDLEWARE DE TOKEN ====================
-function checkToken(req, res, next) {
-    const authHeader = req.headers['authorization']
-    const token = authHeader && authHeader.split(' ')[1]
-
-    if (!token) {
-        return res.status(401).json({ msg: "Acesso Negado" })
-    }
-
-    try {
-        const secret = process.env.SECRET
-        jwt.verify(token, secret)
-        next()
-    } catch (error) {
-        res.status(400).json({ msg: "Token Inválido" })
-    }
-}
 
 // ==================== ROTAS DE USUÁRIO ====================
-app.get("/user/:id", checkToken, async (req, res) => {
-    const user = await User.findById(req.params.id, '-password')
-    if (!user) return res.status(440).json({ msg: 'Usuário não encontrado' })
-    res.status(200).json({ user })
-})
 
-app.post("/auth/register", async (req, res) => {
-    const { name, email, password, confirmpassword } = req.body
-
-    if (!name || !email || !password || password !== confirmpassword) {
-        return res.status(422).json({ msg: "Dados inválidos para cadastro" })
-    }
-
-    const userExists = await User.findOne({ email })
-    if (userExists) return res.status(422).json({ msg: "Por favor utilize outro email" })
-
-    const salt = await bcrypt.genSalt(12)
-    const passwordHash = await bcrypt.hash(password, salt)
-
-    const user = new User({ name, email, password: passwordHash })
-
-    try {
-        await user.save()
-        res.status(201).json({ msg: "Usuário criado com sucesso" })
-    } catch (error) {
-        res.status(500).json({ msg: 'Erro interno no servidor' })
-    }
-})
-
-app.post("/auth/login", async (req, res) => {
-    const { email, password } = req.body
-
-    if (!email || !password) return res.status(422).json({ msg: "Email e senha são obrigatórios" })
-
-    const user = await User.findOne({ email })
-    if (!user) return res.status(404).json({ msg: "Usuário não encontrado" })
-
-    const checkPassword = await bcrypt.compare(password, user.password)
-    if (!checkPassword) return res.status(422).json({ msg: "Senha inválida" })
-
-    try {
-        const token = jwt.sign({ id: user._id }, process.env.SECRET)
-        res.status(200).json({ msg: "Autenticação realizada com sucesso", token })
-    } catch (err) {
-        res.status(500).json({ msg: 'Erro ao gerar token' })
-    }
-})
 
 // ==================== ROTAS DE ANIMES ====================
-app.post('/animes', checkToken, async (req, res) => {
+/* app.post('/animes', checkToken, async (req, res) => {
     const { nome, episodios, filmes, ovas, descricao, imagem } = req.body
 
     if (!nome || episodios == null || filmes == null || ovas == null || !descricao || !imagem) {
@@ -136,7 +81,7 @@ app.get('/animes/:id', async (req, res) => {
     } catch (error) {
         res.status(500).json({ msg: 'Erro ao buscar anime', error })
     }
-})
+}) */
 
 // ==================== CONEXÃO COM BANCO DE USUÁRIOS ====================
 mongoose
