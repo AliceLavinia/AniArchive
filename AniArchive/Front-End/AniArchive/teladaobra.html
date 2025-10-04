@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="./src/css/teladaobra.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" 
+  rel="stylesheet">
+
+  <title>AniArchive - Obra</title>
+
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo">
+        <a href="logada.html"><h1>AniArchive</h1></a>
+      </div>
+
+      <div class="nav-links">
+        <a href="explorar.html">Explorar</a>
+        <a href="lista.html">Minha Lista</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="calendario.html">Calendário</a>
+      </div>
+
+      <div class="search-profile">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar anime...">
+          <button class="search-button">
+            <img src="./src/imagens/lupinha.png" alt="Pesquisar" class="search-icon">
+          </button>
+        </div>
+
+        <div class="profile">
+          <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
+          <div class="dropdown">
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="config.html">Configurações</a>
+            <a href="home.html">Sair</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTEÚDO DA OBRA -->
+  <main>
+    <section class="anime-info" id="anime-info">
+      <p class="loading">Carregando informações...</p>
+    </section>
+
+  </main>
+
+  <script src="./teladaobra.js"></script>
+</body>
+</html>

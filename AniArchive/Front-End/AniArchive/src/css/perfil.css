@@ -1,0 +1,220 @@
+body {
+  background-color: #121212;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(180deg, #1a1919, #0e0d0d);
+  padding: 24px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+}
+
+.logo h1 {
+  font-family: 'Cossette Titre', cursive;
+  color: #d2f1fc;
+  font-size: 55px;
+  margin: 0;
+  padding: 0;
+}
+
+.logo h1 a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #adadad;
+}
+
+.search-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-left: 50px;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1
+}
+
+.search-button {
+  background: #424242;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.profile {
+  position: relative;
+}
+
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+  margin-right: 60px;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 50px;
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.dropdown a {
+  display: block;
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  background: #9ba5a8;
+  border-radius: 5px;
+}
+
+.profile:hover .dropdown {
+  display: block;
+}
+
+/* Conteúdo do perfil */
+.perfil-container {
+  max-width: 1140px;
+  margin: 30px 0 30px 40px;
+  padding: 0 20px;
+  width: 100px;
+}
+
+.perfil-topo {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.perfil-foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 15px;
+}
+
+.perfil-info {
+  flex: 1;
+}
+
+.perfil-nome {
+  font-size: 28px;
+  margin: 0 0 50px;
+}
+
+.perfil-status {
+  display: flex;
+  gap: 60px;
+}
+
+.perfil-status div {
+  text-align: center;
+}
+
+.perfil-status .valor {
+  display: block;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.perfil-status .label {
+  font-size: 14px;
+  color: #ccc;
+}
+
+/* Seções */
+.seção {
+  margin-top: 30px;
+}
+
+.seção-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.seção-header h2 {
+  font-size: 20px;
+  margin: 0;
+}
+
+.ver-mais {
+  font-size: 14px;
+  color: #bbb;
+  text-decoration: none;
+}
+
+.ver-mais:hover {
+  color: white;
+}
+
+.card-lista {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.card-lista img {
+  width: 110px;
+  height: 160px;
+  border-radius: 8px;
+  flex-shrink: 0;
+  transition: transform 0.3s ease;
+}
+
+.card-lista img:hover {
+  transform: scale(1.08);
+}
