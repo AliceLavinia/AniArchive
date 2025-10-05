@@ -11,18 +11,17 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-// ==================== MODELOS (existente) ====================
-
-// Usuario usa a conexão padrão
+// ==================== MODELOS (existentes) ====================
+// Se você já tem User em ./models/User, mantém igual:
 const User = require('./models/User')
 
-// (Opcional) Conexão separada para Anime - pode manter se você usa em outras rotas.
-// A nova rota de recomendação NÃO depende desta conexão; ela usa a conexão padrão.
+// (Opcional) conexão separada para Anime que você já usava.
+// A nova rota de recomendação NÃO depende dela, então pode manter ou remover.
 const animeConnection = mongoose.createConnection(
   process.env.MONGO_URI || "mongodb://localhost:27017/aniarchive"
 )
 
-const Anime = animeConnection.model('Anime', new mongoose.Schema({
+const LegacyAnime = animeConnection.model('Anime', new mongoose.Schema({
   nome: String,
   episodios: Number,
   filmes: Number,
@@ -33,11 +32,10 @@ const Anime = animeConnection.model('Anime', new mongoose.Schema({
 
 // ==================== ROTAS (auto-mount) ====================
 const routesPath = path.join(__dirname, 'routes')
-
 fs.readdirSync(routesPath).forEach(file => {
   if (file.endsWith('.js')) {
     const route = require(path.join(routesPath, file))
-    app.use('/', route) // se quiser prefixo, troque para '/api'
+    app.use('/', route)                // se quiser prefixo, troque para '/api'
   }
 })
 
