@@ -1,54 +1,45 @@
-require('dotenv').config()
-const express = require('express')
-const path = require('path')
-const fs = require('fs')
-const mongoose = require('mongoose')
-const bcrypt = require('bcrypt')
-const jwt = require('jsonwebtoken')
-const cors = require('cors')
+// Back-End/server.js
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname,'.env') });
+console.log('MONGO_URI loaded:', !!process.env.MONGO_URI ? 'Yes' : 'No');
+if (process.env.MONGO_URI) console.log('MONGO_URI prefix:', process.env.MONGO_URI.slice(0, 60) + '...');
 
-const app = express()
-app.use(express.json())
-app.use(cors())
 
-// ==================== MODELOS (existentes) ====================
-// Se você já tem User em ./models/User, mantém igual:
-const User = require('./models/User')
+const express = require('express');
+const fs = require('fs');
+const mongoose = require('mongoose');
+const cors = require('cors');
 
-// (Opcional) conexão separada para Anime que você já usava.
-// A nova rota de recomendação NÃO depende dela, então pode manter ou remover.
-const animeConnection = mongoose.createConnection(
-  process.env.MONGO_URI || "mongodb://localhost:27017/aniarchive"
-)
+const app = express();
+app.use(express.json());
+app.use(cors());
 
-const LegacyAnime = animeConnection.model('Anime', new mongoose.Schema({
-  nome: String,
-  episodios: Number,
-  filmes: Number,
-  ovas: Number,
-  descricao: String,
-  imagem: String
-}))
+// Se tiver require('./models/User'), pode manter
+// Remova QUALQUER mongoose.createConnection(...) em qualquer arquivo do projeto
 
-// ==================== ROTAS (auto-mount) ====================
-const routesPath = path.join(__dirname, 'routes')
-fs.readdirSync(routesPath).forEach(file => {
-  if (file.endsWith('.js')) {
-    const route = require(path.join(routesPath, file))
-    app.use('/', route)                // se quiser prefixo, troque para '/api'
-  }
-})
+// ---- conexão única com o Mongo (Atlas) ----
+const uri = process.env.MONGO_URI;
+if (!uri) {
+  console.error('❌ MONGO_URI não definida em Back-End/.env');
+  process.exit(1);
+}
 
-// ==================== CONEXÃO COM O BANCO (padrão) ====================
-mongoose
-  .connect(
-    process.env.MONGO_URI || "mongodb://localhost:27017/aniarchive",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+mongoose.connect(uri) // Mongoose 7+: sem opções deprecadas
   .then(() => {
-    console.log(`✅ Conectado ao banco (conexão padrão)`)
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(`🚀 Servidor rodando na porta ${process.env.PORT || 3000}`)
-    })
+    console.log('✅ Mongo conectado');
+
+    // monta rotas depois que conectar
+    const routesPath = path.join(__dirname, 'routes');
+    if (fs.existsSync(routesPath)) {
+      fs.readdirSync(routesPath).forEach(file => {
+        if (file.endsWith('.js')) app.use('/', require(path.join(routesPath, file)));
+      });
+    }
+
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => console.log(`🚀 Server na porta ${port}`));
   })
-  .catch((err) => console.log('❌ Erro na conexão com o banco:', err))
+  .catch(err => {
+    console.error('❌ Erro ao conectar no Mongo:', err.message);
+    process.exit(1);
+  });
