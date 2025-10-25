@@ -1,66 +1,100 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AniArchive - Configurações</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="/src/css/config.css" />
-
-    <title>AniArchive - Configurações</title>
-
+  <link rel="stylesheet" href="./src/css/config.css">
 </head>
+
 <body>
-    <header>
+  <header class="header">
+    <div class="navbar">
+      <div class="logo">
         <h1>AniArchive</h1>
-    </header>
-    
+      </div>
+
+      <div class="nav-links">
+        <a href="#">🏠 Home</a>
+        <a href="#">📂 Categoria</a>
+        <a href="#">📅 Calendário</a>
+      </div>
+
+      <div class="search-profile">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar anime...">
+          <button class="search-button" aria-label="Pesquisar">
+            <img src="./src/imagens/lupinha.png" alt="Buscar" class="search-icon">
+          </button>
+        </div>
+
+        <div class="profile">
+          <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
+          <div class="dropdown">
+            <a href="#">Minha Lista</a>
+            <a href="#">Favoritos</a>
+            <a href="#">Configurações</a>
+            <a href="#">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
     <section class="perfil-config">
-        <h2>Configurações de Perfil</h2>
-        <div class="perfil-container">
-            <div class="perfil-editar">
-                <h3>Editar Perfil</h3>
-                <label for="usuario">Nome de Usuário</label>
-                <div class="input-container">
-                    <input type="text" id="usuario" value="satoruzinho_123" disabled>
-                    <span class="edit-icon">✎</span>
-                </div>
-                
-                <label for="email">Email</label>
-                <div class="input-container">
-                    <input type="email" id="email" value="satoruzinhogostosso@gmail.com" disabled>
-                    <span class="edit-icon">✎</span>
-                </div>
-                
-                <label for="senha">Senha</label>
-                <div class="input-container">
-                    <input type="password" id="senha" value="***********************" disabled>
-                    <span class="edit-icon">✎</span>
-                </div>
-            </div>
-            <div class="perfil-imagem">
-                <img class="imagem" src="./src/imagens/perfil.jpg" alt="Perfil" />
-            </div>
+      <h2>Configurações de Perfil</h2>
+      <div class="perfil-container">
+        <div class="perfil-editar">
+          <h3>Editar Perfil</h3>
+          <label for="usuario">Nome de Usuário</label>
+          <div class="input-container">
+            <input type="text" id="usuario" value="satoruzinho_123" disabled>
+            <span class="edit-icon">✎</span>
+          </div>
+
+          <label for="email">Email</label>
+          <div class="input-container">
+            <input type="email" id="email" value="satoruzinhogostosso@gmail.com" disabled>
+            <span class="edit-icon">✎</span>
+          </div>
+
+          <label for="senha">Senha</label>
+          <div class="input-container">
+            <input type="password" id="senha" value="***********************" disabled>
+            <span class="edit-icon">✎</span>
+          </div>
         </div>
+
+        <div class="perfil-imagem">
+          <img class="imagem" src="./src/imagens/perfil.jpg" alt="Perfil" />
+        </div>
+      </div>
     </section>
-    
+
     <section class="notificacoes">
-        <h2>Notificações</h2>
-        <div class="notificacao-item">
-            <label>Ligar/Desligar - Animes</label>
-            <input type="checkbox" checked>
-        </div>
-        <div class="notificacao-item">
-            <label>Ligar/Desligar - Mangás</label>
-            <input type="checkbox" checked>
-        </div>
-        <div class="notificacao-item">
-            <label>Ligar/Desligar - Filmes</label>
-            <input type="checkbox" checked>
-        </div>
+      <h2>Notificações</h2>
+      <div class="notificacao-item">
+        <label>Ligar/Desligar - Animes</label>
+        <input type="checkbox" checked>
+      </div>
+      <div class="notificacao-item">
+        <label>Ligar/Desligar - Mangás</label>
+        <input type="checkbox" checked>
+      </div>
+      <div class="notificacao-item">
+        <label>Ligar/Desligar - Filmes</label>
+        <input type="checkbox" checked>
+      </div>
     </section>
+  </main>
 </body>
+
 </html>

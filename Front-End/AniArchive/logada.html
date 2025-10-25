@@ -1,102 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Pixelify+Sans&display=swap"
-        rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="src/css/logada.css">
-
-    <title>AniArchive</title>
-
-    <style>
-        .line.large-line {
-            width: 100%;
-            height: 1px; /* Aumenta a espessura da linha */
-            background-color: #f0f0f0; /* Mesma cor da section-header */
-            margin-top: -7px; /* Adiciona um espaçamento superior */
-            margin-bottom: 10px; /* Adiciona um espaçamento inferior */
-        }
-    </style>
+  <link rel="stylesheet" href="src/css/logada.css">
+  <title>AniArchive</title>
 </head>
-
 <body>
 
-    <header class="header">
-        <div class="navbar">
-            <div class="overlay">
-                <h1>AniArchive</h1>
-            </div>
-            <div class="search-profile">
-                <input type="text" id="meuInput" style="display: none;">
+  <header class="header">
+    <div class="navbar">
+      <div class="logo">
+        <a href="logada.html"><h1>AnimeBox</h1></a>
+      </div>
+
+
+      <div class="nav-links">
+        <a href="explorar.html">Explorar</a>
+        <a href="lista.html">Minha Lista</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="calendario.html">Calendário</a>
+      </div>
+
+      <div class="search-profile">
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Buscar anime...">
+            <button class="search-button">
                 <img src="./src/imagens/lupinha.png" alt="Pesquisar" class="search-icon">
-                <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
+            </button>
+        </div>
+
+        <div class="profile">
+            <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
+            <div class="dropdown">
+                <a href="perfil.html">Meu Perfil</a>
+                <a href="config.html">Configurações</a>
+                <a href="home.html">Sair</a>
             </div>
         </div>
-        <div class="pages-bar">
-            <a href="#">Home</a>
-            <a href="#">Categoria</a>
-            <a href="#">Calendario</a>
-        </div>
-    </header>
 
-    <section class="content">
-        <div class="section-header">
-            <h2>Animes Populares</h2>
-            <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
-        </div>
-        <div class="line large-line"></div> <!-- Linha decorativa maior -->
-        <div class="anime-list">
-            <img class="imagem" src="./src/img-ctlg-pop/one-piece.png" alt="One Piece">
-            <img class="imagem" src="./src/img-ctlg-pop/naruto.jpg" alt="Naruto" onclick="window.location.href='teladaobra.html'">
-            <img class="imagem" src="./src/img-ctlg-pop/dragon-ball-z.png" alt="Dragon Ball Z">
-            <img class="imagem" src="./src/img-ctlg-pop/snk.png" alt="Attack on Titan">
-            <img class="imagem" src="./src/img-ctlg-pop/death-note.jpg" alt="Death Note">
-            <img class="imagem" src="./src/img-ctlg-pop/dan-da-dan.png" alt="Dan Da Dan">
-            <img class="imagem" src="./src/img-ctlg-pop/jjk.png" alt="Jujutsu Kaisen">
-            <img class="imagem" src="./src/img-ctlg-pop/kny.jpg" alt="Kimetsu no Yaiba">
-            <img class="imagem" src="./src/img-ctlg-pop/pokemon.png" alt="Pokémon">
-        </div>
-    
-        <div class="section-header">
-            <h2>Lançamentos</h2>
-            <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
-        </div>
-        <div class="line large-line"></div> <!-- Linha decorativa maior -->
-        <div class="anime-list">
-            <img class="imagem" src="./src/img-ctlg-lanc/amagami-sister.jpg" alt="Amagami Sister">
-            <img class="imagem" src="./src/img-ctlg-lanc/blue-miburo.jpg" alt="Blue Miburo">
-            <img class="imagem" src="./src/img-ctlg-lanc/dragon-ball-d.jpg" alt="Dragon Ball D">
-            <img class="imagem" src="./src/img-ctlg-lanc/fairy-tail.jpg" alt="Fairy Tail">
-            <img class="imagem" src="./src/img-ctlg-lanc/ghoul-school.jpg" alt="Ghoul School">
-            <img class="imagem" src="./src/img-ctlg-lanc/rurouni-kenshin.jpg" alt="Rurouni Kenshin">
-            <img class="imagem" src="./src/img-ctlg-lanc/sakamoto-days.jpg" alt="Sakamoto Days">
-            <img class="imagem" src="./src/img-ctlg-lanc/shangrila-frontier.jpg" alt="Shangri-La Frontier">
-            <img class="imagem" src="./src/img-ctlg-lanc/solo-leveling.jpg" alt="Solo Leveling">
-        </div>
-    
-        <div class="section-header">
-            <h2>Futuros Lançamentos</h2>
-            <a href="http://google.com" target="_blank" class="ver-mais">Ver mais+</a>
-        </div>
-        <div class="line large-line"></div> <!-- Linha decorativa maior -->
-        <div class="anime-list">
-            <img class="imagem" src="./src/img-ctlg-fut/dress-up.png" alt="Dress Up">
-            <img class="imagem" src="./src/img-ctlg-fut/dungeon-meshi.png" alt="Dungeon Meshi">
-            <img class="imagem" src="./src/img-ctlg-fut/frieren.png" alt="Frieren">
-            <img class="imagem" src="./src/img-ctlg-fut/hell-paradise.png" alt="Hell's Paradise">
-            <img class="imagem" src="./src/img-ctlg-fut/opm.png" alt="One Punch Man">
-            <img class="imagem" src="./src/img-ctlg-fut/oshi-no-ko.png" alt="Oshi no Ko">
-            <img class="imagem" src="./src/img-ctlg-fut/spy-family.png" alt="Spy Family">
-            <img class="imagem" src="./src/img-ctlg-fut/tanya-evil.png" alt="Tanya Evil">
-            <img class="imagem" src="./src/img-ctlg-fut/bleach.png" alt="Bleach">
-        </div>
-    </section>     
+    </div>
+  </header>
+
+  <section class="content">
+    <!-- Animes Populares -->
+    <div class="section-header">
+      <h2>Animes Populares</h2>
+      <a href="#" class="ver-mais">Ver mais+</a>
+    </div>
+    <div class="anime-list scroll">
+      <div class="anime-card"><img src="./src/img-ctlg-pop/one-piece.png" alt="One Piece"><div class="anime-info"><p>One Piece</p><span>⭐ 9.0 | Shounen</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/naruto.jpg" alt="Naruto"><div class="anime-info"><p>Naruto</p><span>⭐ 8.5 | Ação</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/dragon-ball-z.png" alt="Dragon Ball Z"><div class="anime-info"><p>Dragon Ball Z</p><span>⭐ 8.9 | Luta</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/snk.png" alt="Attack on Titan"><div class="anime-info"><p>Attack on Titan</p><span>⭐ 9.2 | Ação</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/death-note.jpg" alt="Death Note"><div class="anime-info"><p>Death Note</p><span>⭐ 9.0 | Suspense</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/dan-da-dan.png" alt="Dan Da Dan"><div class="anime-info"><p>Dan Da Dan</p><span>⭐ 7.9 | Sobrenatural</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/jjk.png" alt="Jujutsu Kaisen"><div class="anime-info"><p>Jujutsu Kaisen</p><span>⭐ 8.7 | Shounen</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/kny.jpg" alt="Kimetsu no Yaiba"><div class="anime-info"><p>Kimetsu no Yaiba</p><span>⭐ 8.6 | Fantasia</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-pop/pokemon.png" alt="Pokémon"><div class="anime-info"><p>Pokémon</p><span>⭐ 7.5 | Aventura</span></div></div>
+    </div>
+
+    <!-- Lançamentos -->
+    <div class="section-header">
+      <h2>Lançamentos</h2>
+      <a href="#" class="ver-mais">Ver mais+</a>
+    </div>
+    <div class="anime-list scroll">
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/amagami-sister.jpg" alt="Amagami Sister"><div class="anime-info"><p>Amagami Sister</p><span>⭐ 7.8 | Romance</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/blue-miburo.jpg" alt="Blue Miburo"><div class="anime-info"><p>Blue Miburo</p><span>⭐ 7.5 | Histórico</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/dragon-ball-d.jpg" alt="Dragon Ball D"><div class="anime-info"><p>Dragon Ball D</p><span>⭐ 8.0 | Ação</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/fairy-tail.jpg" alt="Fairy Tail"><div class="anime-info"><p>Fairy Tail</p><span>⭐ 7.9 | Magia</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/ghoul-school.jpg" alt="Ghoul School"><div class="anime-info"><p>Ghoul School</p><span>⭐ 7.6 | Horror</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/rurouni-kenshin.jpg" alt="Rurouni Kenshin"><div class="anime-info"><p>Rurouni Kenshin</p><span>⭐ 8.2 | Samurai</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/sakamoto-days.jpg" alt="Sakamoto Days"><div class="anime-info"><p>Sakamoto Days</p><span>⭐ 8.1 | Ação</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/shangrila-frontier.jpg" alt="Shangri-La Frontier"><div class="anime-info"><p>Shangri-La Frontier</p><span>⭐ 8.0 | Isekai</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-lanc/solo-leveling.jpg" alt="Solo Leveling"><div class="anime-info"><p>Solo Leveling</p><span>⭐ 8.9 | Fantasia</span></div></div>
+    </div>
+
+    <!-- Futuros Lançamentos -->
+    <div class="section-header">
+      <h2>Futuros Lançamentos</h2>
+      <a href="#" class="ver-mais">Ver mais+</a>
+    </div>
+    <div class="anime-list scroll">
+      <div class="anime-card"><img src="./src/img-ctlg-fut/dress-up.png" alt="Dress Up"><div class="anime-info"><p>Dress Up</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/dungeon-meshi.png" alt="Dungeon Meshi"><div class="anime-info"><p>Dungeon Meshi</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/frieren.png" alt="Frieren"><div class="anime-info"><p>Frieren</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/hell-paradise.png" alt="Hell's Paradise"><div class="anime-info"><p>Hell's Paradise</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/opm.png" alt="One Punch Man"><div class="anime-info"><p>One Punch Man</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/oshi-no-ko.png" alt="Oshi no Ko"><div class="anime-info"><p>Oshi no Ko</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/spy-family.png" alt="Spy Family"><div class="anime-info"><p>Spy Family</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/tanya-evil.png" alt="Tanya Evil"><div class="anime-info"><p>Tanya Evil</p><span>⭐ Em breve</span></div></div>
+      <div class="anime-card"><img src="./src/img-ctlg-fut/bleach.png" alt="Bleach"><div class="anime-info"><p>Bleach</p><span>⭐ Em breve</span></div></div>
+    </div>
+  </section>
 </body>
-
 </html>

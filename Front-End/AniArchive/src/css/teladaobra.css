@@ -1,92 +1,189 @@
-* {
+/* ---------- NAVBAR (mesmo estilo da logada.css) ---------- */
+body {
+  background-color: #1b1a1a;
+  color: white;
+  font-family: 'Pixelify Sans', sans-serif;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  font-family: 'Arial', sans-serif;
 }
 
-body {
-  background-color: #111;
-  color: #ccc;
-  padding: 20px;
-}
-
-header {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 24px;
-  margin-bottom: 40px;
+  background: linear-gradient(180deg, #1a1919, #0e0d0d);
+  padding: 24px 40px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-.logo {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 22px;
-  color: #ccc;
+.logo h1 {
+  font-family: 'Cossette Titre', cursive;
+  color: #d2f1fc;
+  font-size: 45px;
+  margin: 0;
 }
 
-.top-right {
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.nav-links a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.nav-links a:hover {
+  color: #adadad;
+}
+
+.search-profile {
   display: flex;
   align-items: center;
+  gap: 20px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.search-input {
+  padding: 6px 10px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  flex: 1;
+}
+
+.search-button {
+  background: #424242;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-icon {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
-  cursor: pointer;
-  margin-right: 120px; /* afasta a lupa do avatar */
+  width: 20px;
+  height: 20px;
 }
 
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-}
-
-.anime-info {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
+.profile {
   position: relative;
-  margin-bottom: 60px;
 }
 
-.cover {
-  width: 120px;
+.profile-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid white;
+}
+
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background: #222;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+}
+
+.dropdown a {
+  display: block;
+  padding: 8px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.dropdown a:hover {
+  background: #9ba5a8;
   border-radius: 5px;
 }
 
+.profile:hover .dropdown {
+  display: block;
+}
+
+/* ---------- CONTEÚDO DA OBRA ---------- */
+.anime-info {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  position: relative;
+  margin: 40px auto;
+  background: #1a1a1a;
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 900px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+.cover {
+  width: 180px;
+  border-radius: 8px;
+}
+
 .details {
-  max-width: 500px;
+  max-width: 600px;
+}
+
+.details h2 {
+  font-size: 28px;
+  color: #fff;
 }
 
 .year {
-  color: #ccc;
+  color: #aaa;
   margin-top: 8px;
 }
 
 .desc {
   margin: 15px 0;
-  line-height: 1.5;
+  line-height: 1.6;
+  text-align: justify;
 }
 
 .add-btn {
   background-color: #19C419;
   color: white;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   position: absolute;
-  top: 0;
-  right: 120px;
+  top: 20px;
+  right: 20px;
   cursor: pointer;
+  font-weight: bold;
+  transition: background 0.2s ease;
+}
+.add-btn:hover {
+  background-color: #149614;
+}
+
+.resenhas {
+  max-width: 900px;
+  margin: 0 auto 40px;
 }
 
 .resenhas h3 {
-  font-size: 20px;
-  margin-bottom: 10px;
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
 }
 
 .resenha {
@@ -95,16 +192,21 @@ header {
   padding: 15px;
   display: flex;
   gap: 15px;
-  max-width: 600px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .resenha-img {
-  width: 140px;
-  height: auto;
-  border-radius: 5px;
-  object-fit: contain;
+  width: 120px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
 .resenha-text p {
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+}
+
+.loading {
+  font-style: italic;
+  color: #888;
 }

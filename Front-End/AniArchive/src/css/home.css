@@ -2,9 +2,9 @@
 body {
     background-color: #111;
     color: white;
-    text-align: center;
     margin: 0;
     padding: 0;
+    font-family: 'Pixelify Sans', sans-serif;
 }
 
 /* Cabeçalho */
@@ -12,135 +12,143 @@ body {
     position: relative;
     width: 100%;
     height: 393px;
-    background: url('banner.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
-/* Container para alinhar título, subtítulo e botões */
+.header .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay escuro */
 .header .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 1;
+}
+
+/* Conteúdo no centro */
+.hero-content {
+    position: absolute;
+    top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
-    padding: 20px;
-    border-radius: 10px;
 }
 
 /* Título */
-.header h1 {
+.hero-content h1 {
     font-family: 'Press Start 2P', cursive;
     font-size: 43px;
     color: white;
     margin: 0;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.9);
 }
 
 /* Subtítulo */
-.header p {
+.subtitle {
     font-size: 18px;
     color: #f1c40f;
-    margin: 5px 0;
-}
-
-.header h2 {
-    font-size: 18px; /* Tamanho da fonte */
-    color: white; /* Cor do texto */
-    text-align: center; /* Alinhamento do texto */
-    margin: 15px 0; /* Espaçamento entre os textos */
+    margin: 10px 0 20px;
 }
 
 /* Botões */
-.header .buttons {
-    margin-top: 10px;
+.buttons {
     display: flex;
     gap: 15px;
     justify-content: center;
 }
 
-button {
+.btn-login {
     background: rgba(255, 255, 255, 0.2);
     border: 1px solid white;
-    padding: 10px 15px;
+    padding: 10px 20px;
     font-size: 14px;
     color: white;
     cursor: pointer;
     border-radius: 8px;
-    backdrop-filter: blur(5px);
     transition: 0.3s;
 }
 
-button:hover {
+.btn-login:hover {
     background: rgba(255, 255, 255, 0.5);
 }
-/* Ajuste para os textos adicionais */
-.extra-info {
-    margin-top: 50px; /* Ajuste conforme necessário */
-    font-size: 18px;
-    text-align: center;
-    line-height: 1.5;
+
+.btn-cadastro {
+    background: #00b894;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.3s;
 }
 
-/* Seção de conteúdo */
+.btn-cadastro:hover {
+    background: #019474;
+}
+
+/* Benefícios */
+.extra-info {
+    margin: 50px auto;
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.8;
+}
+
+/* Seções */
 .content {
-    padding: 70px;
+    padding: 50px 70px;
 }
 
 .content h2 {
     font-size: 24px;
-    margin-bottom: px;
+    margin-bottom: 20px;
     text-align: left;
-    padding-left: 80px; 
+    position: relative;
 }
 
 .content h2::after {
-    content: ""; 
+    content: "";
     display: block;
-    width: 69%; /* Define o comprimento da linha */
-    height: 0.1px; /* Espessura da linha */
-    background-color: rgba(255, 255, 255, 0.3); /* Cor sutil da linha */
-    position: absolute;
-    margin-top: 5px; /* Ajuste para afastar a linha do texto */
-    left: 150px; /* Move a linha para a direita */
+    width: 100%;
+    max-width: 200px;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
 }
 
-
-
-/* Grade de animes */
+/* Cards de animes */
 .anime-list {
     display: flex;
-    justify-content: flex-start; 
-    align-items: center;
     gap: 15px;
     flex-wrap: wrap;
-    padding-left: 80px; 
+    justify-content: flex-start;
 }
 
-.anime-list img {
-    width: 100px;
-    height: 150px;
-    border-radius: 5px;
-    transition: 0.3s;
+.anime-card {
+    width: 140px;
+    height: 210px;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #222;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.anime-list img:hover {
-    transform: scale(1.1);
+.anime-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.imagem {
-    width: 1480px;  
-    max-width: 100%;  
-    height: 393px;  
-}
-
-/* Ajuste na seção de informações extras */
-.extra-info {
-    margin-top: 30px; /* Aumente esse valor para descer mais */
-    font-family: 'Poppins', sans-serif; /* Fonte personalizada */
-    font-size: 20px; /* Aumenta o tamanho da fonte */
-    text-align: center;
-    line-height: 1.8; /* Aumenta o espaçamento entre linhas */
+.anime-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
 }

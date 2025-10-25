@@ -3,49 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AniArchive - Naruto</title>
+
   <link rel="stylesheet" href="./src/css/teladaobra.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Press+Start+2P&family=Righteous&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cossette+Titre:wght@400;700&display=swap" 
+  rel="stylesheet">
+
+  <title>AniArchive - Obra</title>
+
 </head>
 <body>
-  <header>
-    <h1>AniArchive</h1>
-    <div class="top-right">
-      <img src="./src/imagens/lupinha.png" alt="Buscar" class="search-icon">
-      <img src="./src/imagens/lebisgao.png" alt="Perfil" class="avatar">
+  <!-- NAVBAR -->
+  <header class="header">
+    <div class="navbar">
+      <div class="logo">
+        <a href="logada.html"><h1>AniArchive</h1></a>
+      </div>
+
+      <div class="nav-links">
+        <a href="explorar.html">Explorar</a>
+        <a href="lista.html">Minha Lista</a>
+        <a href="comunidade.html">Comunidade</a>
+        <a href="calendario.html">Calendário</a>
+      </div>
+
+      <div class="search-profile">
+        <div class="search-container">
+          <input type="text" class="search-input" placeholder="Buscar anime...">
+          <button class="search-button">
+            <img src="./src/imagens/lupinha.png" alt="Pesquisar" class="search-icon">
+          </button>
+        </div>
+
+        <div class="profile">
+          <img src="./src/imagens/perfil.jpg" alt="Perfil" class="profile-img">
+          <div class="dropdown">
+            <a href="perfil.html">Meu Perfil</a>
+            <a href="config.html">Configurações</a>
+            <a href="home.html">Sair</a>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 
+  <!-- CONTEÚDO DA OBRA -->
   <main>
-    <section class="anime-info">
-      <img src="./src/img-ctlg-pop/naruto.jpg" alt="Naruto" class="cover">
-      <div class="details">
-        <h2>Naruto</h2>
-        <p class="year">2002</p>
-        <p class="desc">
-          A série gira em torno das aventuras vividas por Naruto Uzumaki, um jovem órfão habitante da Aldeia da Folha que sonha em se tornar o quinto Hokage, <p>o maior guerreiro e governante da vila. Ao se graduar como ninja, Naruto descobre que tem um demônio raposa selado dentro de si.</p>
-        </p>
-        <p><strong>Episódios:</strong> 210</p>
-        <p><strong><u>Filmes:</u></strong> 3</p>
-        <p><strong><u>OVAS:</u></strong> 3</p>
-      </div>
-      <button class="add-btn">+ Adicionar</button>
+    <section class="anime-info" id="anime-info">
+      <p class="loading">Carregando informações...</p>
     </section>
 
-    <section class="resenhas">
-      <h3>Resenhas</h3>
-      <div class="resenha">
-        <img src="./src/img-ctlg-pop/naruto.jpg" alt="Naruto" class="resenha-img">
-        <div class="resenha-text">
-          <p><strong>Nome:</strong> Naruto</p>
-          <p><strong>Ano:</strong> 2002</p>
-          <p><strong>Nota:</strong> ⭐⭐⭐⭐⭐</p>
-          <p>Anime ótimo, com boas lutas, história emocionante, bons personagens e uma jornada épica</p>
-        </div>
-      </div>
-    </section>
   </main>
+
+  <script src="./teladaobra.js"></script>
 </body>
 </html>
