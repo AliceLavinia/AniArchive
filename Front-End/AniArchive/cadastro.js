@@ -52,5 +52,7 @@ form.addEventListener('submit', async (event) => {
     } catch (error) {
         messageDiv.style.color = "red";
         messageDiv.textContent = "Erro ao conectar com o servidor!";
+        msg = error.message;
+        console.log(msg);
     }
 });
